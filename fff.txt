@@ -1,0 +1,106 @@
+Here is the sample data you can use with **Postman** to test each type of request (**GET**, **POST**, **PUT**, and **DELETE**) for your Flask API:
+
+---
+
+### ✅ 1. **GET All Items**
+
+**Method:** `GET`
+**URL:** `http://127.0.0.1:5000/items`
+**Body:** *None*
+**Expected Response:**
+
+```json
+{
+  "items": [
+    {"id": 1, "name": "Item 1"},
+    {"id": 2, "name": "Item 2"},
+    {"id": 3, "name": "Item 3"}
+  ]
+}
+```
+
+---
+
+### ✅ 2. **GET Specific Item**
+
+**Method:** `GET`
+**URL:** `http://127.0.0.1:5000/items/2`
+**Body:** *None*
+**Expected Response:**
+
+```json
+{
+  "item": {"id": 2, "name": "Item 2"}
+}
+```
+
+---
+
+### ✅ 3. **POST Add New Item**
+
+**Method:** `POST`
+**URL:** `http://127.0.0.1:5000/items`
+**Body Type:** `raw` → `JSON`
+**Body:**
+
+```json
+{
+  "name": "Item 4"
+}
+```
+
+**Expected Response:**
+
+```json
+{
+  "item": {
+    "id": 4,
+    "name": "Item 4"
+  }
+}
+```
+
+---
+
+### ✅ 4. **PUT Update Item**
+
+**Method:** `PUT`
+**URL:** `http://127.0.0.1:5000/items/3`
+**Body Type:** `raw` → `JSON`
+**Body:**
+
+```json
+{
+  "name": "Updated Item 3"
+}
+```
+
+**Expected Response:**
+
+```json
+{
+  "item": {
+    "id": 3,
+    "name": "Updated Item 3"
+  }
+}
+```
+
+---
+
+### ✅ 5. **DELETE Item**
+
+**Method:** `DELETE`
+**URL:** `http://127.0.0.1:5000/items/2`
+**Body:** *None*
+**Expected Response:**
+
+```json
+{
+  "message": "Item deleted"
+}
+```
+
+---
+
+Let me know if you want a Postman collection file (`.json`) to import and test directly.
